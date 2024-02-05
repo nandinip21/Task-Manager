@@ -1,0 +1,23 @@
+.create-btn{
+    /* background-color: #faa307; */
+    /* position: absolute; */
+    /* top:50%; */
+    /* background-color:#0a0a23; */
+    /* color: #fff; */
+    /* border:none;  */
+    border:solid #faa307;
+    color:#faa307;
+    background-color: white;
+    border-radius:10px;
+    padding:15px;
+    /* min-height:30px;  */
+    /* min-width: 120px; */
+}
+
+.create-btn:hover{
+    /* background-color: #ffba08; */
+    background-color: #faa307;
+    transition:0.4s;
+    color:white;
+    cursor: pointer;
+}

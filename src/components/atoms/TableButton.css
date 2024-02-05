@@ -1,0 +1,16 @@
+button {
+    border:solid #faa307;
+    color:#faa307;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    border-radius: 10%;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  button:hover{
+    opacity:0.5;
+  }
