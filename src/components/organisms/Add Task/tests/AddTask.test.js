@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import {AddTask} from '../AddTask';
 
 test("Hotfix",()=>{
-  // Navigating to the correct url on submit
+  /* Navigating to the correct url on submit*/
 })
 
 // test('useState mock', () => {
