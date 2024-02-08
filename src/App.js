@@ -13,8 +13,6 @@ function App() {
         <div className="App">
           <Routes>
             <Route exact path="/" element={<Dashboard />} />
-            <Route path="/view-task/:id" element={<ViewTask />} />
-            <Route path="/add-task/:id" element={<AddTask />} />
           </Routes>
         </div>
       </BrowserRouter>

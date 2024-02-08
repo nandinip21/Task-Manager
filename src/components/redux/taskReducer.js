@@ -61,7 +61,6 @@ const taskReducer = (state = initialState, action) => {
           return currTask;
         } else return task;
       });
-      console.log("$$$", newTasks);
       return state.set("tasks", newTasks);
     }
     case EDIT_SAGA_TASK_SUCCESS:

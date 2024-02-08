@@ -14,7 +14,7 @@ function* onEditTask(action) {
     const task = res.data.filter((obj) => obj.title === oldTask.title);
     const response = yield call(
       axios.put,
-      [`http://localhost:3000/tasks/${task[0].id}`],
+      [`http://localhost:3000/tasks/${task?.[0]?.id}`],
       currTask
     );
     console.log("Edited Data", response.data);

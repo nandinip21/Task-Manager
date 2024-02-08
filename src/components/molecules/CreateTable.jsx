@@ -19,14 +19,22 @@ const CreateTable = (props) => {
         <td>{t.description}</td>
         <td>{t.deadline}</td>
         <td>{t.priority}</td>
-        <Link to={`/view-task/${index}`}>
-          <td>
-            <TableButton btnContent="View" />
-          </td>
-        </Link>
+        <td>
+          <TableButton
+            btnContent="View"
+            props={props}
+            taskId={index}
+            toggleViewTaskHandler={props.toggleViewTaskHandler}
+          />
+        </td>
         <Link>
           <td>
-            <TableButton btnContent="Delete" indexId={index} taskId={t.id} />
+            <TableButton
+              btnContent="Delete"
+              indexId={index}
+              taskId={t.id}
+              toggleDeleteTaskHandler={props.toggleDeleteTaskHandler}
+            />
           </td>
         </Link>
       </tr>

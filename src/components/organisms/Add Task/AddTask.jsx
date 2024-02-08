@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../Add Task/AddTask.css";
 import { connect } from "react-redux";
 import { addTask } from "../../redux/actions";
-import Input from '../../atoms/Input'
+import Input from "../../atoms/Input";
 
 export const AddTask = (props) => {
   const [task, setTask] = useState({
@@ -44,7 +44,10 @@ export const AddTask = (props) => {
           <input
             type="submit"
             value="Create Task"
-            onClick={() => props.addTask(task)}
+            onClick={() => {
+              props.addTask(task);
+              props.toggleCreateTaskHandler();
+            }}
           />
         </Link>
       </form>

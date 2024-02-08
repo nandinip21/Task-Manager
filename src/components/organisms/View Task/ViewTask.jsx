@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 import Input from "../../atoms/Input";
 
 export const ViewTask = (props) => {
-  const { id } = useParams();
-  console.log(props,"***",id);
+  const id = props.viewTaskId;
+  console.log(props, "***", id);
   console.log(props.tasks);
   const [row, setRow] = useState({
     title: props.tasks[id].title,
@@ -49,7 +49,10 @@ export const ViewTask = (props) => {
           <input
             type="submit"
             value="Edit Task"
-            onClick={() => props.editSagaTask(oldTask, row, id)}
+            onClick={() => {
+              props.editSagaTask(oldTask, row, id);
+              props.toggleViewTaskHandler();
+            }}
           />
         </Link>
       </form>
