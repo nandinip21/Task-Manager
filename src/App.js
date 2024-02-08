@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "./components/organisms/Dashboard/Dashboard";
-import ViewTask from './components/organisms/View Task/ViewTask';
-import AddTask from './components/organisms/Add Task/AddTask';
+import ViewTask from "./components/organisms/View Task/ViewTask";
+import AddTask from "./components/organisms/Add Task/AddTask";
 import { Provider } from "react-redux";
 import store from "./store";
 

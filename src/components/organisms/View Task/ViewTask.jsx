@@ -5,8 +5,10 @@ import { editSagaTask } from "../../redux/actions";
 import { Link } from "react-router-dom";
 import Input from "../../atoms/Input";
 
-const ViewTask = (props) => {
+export const ViewTask = (props) => {
   const { id } = useParams();
+  console.log(props,"***",id);
+  console.log(props.tasks);
   const [row, setRow] = useState({
     title: props.tasks[id].title,
     description: props.tasks[id].description,

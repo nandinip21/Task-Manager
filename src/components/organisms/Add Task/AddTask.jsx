@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { addTask } from "../../redux/actions";
 import Input from '../../atoms/Input'
 
-const AddTask = (props) => {
+export const AddTask = (props) => {
   const [task, setTask] = useState({
     title: "Task Title",
     description: "Task Description",
@@ -58,5 +58,3 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 export default connect(null, mapDispatchToProps)(AddTask);
-
-export {AddTask};
