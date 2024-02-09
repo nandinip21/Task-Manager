@@ -23,26 +23,35 @@ const Dashboard = (props) => {
         : TASK_TYPES.VIEW_TASKS
     );
   };
-  // const toggleDeleteTaskHandler = () => {
-  //   setTaskType((taskType) =>
-  //     taskType === TASK_TYPES.DELETE_TASK
-  //     && TASK_TYPES.DELETE_TASK
-  //   );
-  // }
-  
+  const toggleDeleteTaskHandler = () => {
+    setTaskType((taskType) =>
+      taskType === TASK_TYPES.VIEW_TASKS
+        ? TASK_TYPES.DELETE_TASK
+        : TASK_TYPES.VIEW_TASKS
+    );
+  }
+
+  console.log("****taskType", taskType)
   return (
     <Fragment>
       {taskType === TASK_TYPES.VIEW_TASKS && (
         <Fragment>
           <NavBar toggleCreateTaskHandler={toggleCreateTaskHandler} />
-          <CreateTable setViewTaskId={setViewTaskId} toggleViewTaskHandler={toggleViewTaskHandler} />
+          <CreateTable
+            setViewTaskId={setViewTaskId}
+            toggleViewTaskHandler={toggleViewTaskHandler}
+          />
         </Fragment>
       )}
-      {taskType === TASK_TYPES.VIEW_TASK && <ViewTask viewTaskId={viewTaskId} toggleViewTaskHandler={toggleViewTaskHandler} />}
+      {taskType === TASK_TYPES.VIEW_TASK && (
+        <ViewTask
+          viewTaskId={viewTaskId}
+          toggleViewTaskHandler={toggleViewTaskHandler}
+        />
+      )}
       {taskType === TASK_TYPES.CREATE_TASK && (
         <AddTask toggleCreateTaskHandler={toggleCreateTaskHandler} />
       )}
-
     </Fragment>
   );
 };

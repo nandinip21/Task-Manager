@@ -7,13 +7,12 @@ import Input from "../../atoms/Input";
 
 export const ViewTask = (props) => {
   const id = props.viewTaskId;
-  console.log(props, "***", id);
-  console.log(props.tasks);
+  console.log('****hash',props.tasks, id, '***tasks', props.tasks);
   const [row, setRow] = useState({
-    title: props.tasks[id].title,
-    description: props.tasks[id].description,
-    deadline: props.tasks[id].deadline,
-    priority: props.tasks[id].priority,
+    title: props?.tasks?.[id]?.title,
+    description: props?.tasks?.[id]?.description,
+    deadline: props?.tasks?.[id]?.deadline,
+    priority: props?.tasks?.[id]?.priority,
   });
   const oldTask = props.tasks[id];
 

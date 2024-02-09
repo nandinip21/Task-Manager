@@ -62,9 +62,9 @@ export const addTaskFailure = (err) => ({
   payload: err,
 });
 
-export const deleteSagaTask = (id1, id2) => ({
+export const deleteSagaTask = (id1) => ({
   type: DELETE_SAGA_TASK,
-  payload: { id1, id2 },
+  payload: { id1 },
 });
 
 export const deleteSagaTaskSuccess = (task) => ({

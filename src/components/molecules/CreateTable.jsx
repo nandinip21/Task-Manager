@@ -33,7 +33,7 @@ const CreateTable = (props) => {
               btnContent="Delete"
               indexId={index}
               taskId={t.id}
-              toggleDeleteTaskHandler={props.toggleDeleteTaskHandler}
+              toggleViewTaskHandler={props.toggleViewTaskHandler}
             />
           </td>
         </Link>

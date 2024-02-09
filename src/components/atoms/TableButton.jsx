@@ -3,13 +3,7 @@ import "../atoms/TableButton.css";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteSagaTask } from "../redux/actions";
 
-const TableButton = ({
-  btnContent,
-  props,
-  taskId,
-  toggleViewTaskHandler,
-  toggleDeleteTaskHandler,
-}) => {
+const TableButton = ({ btnContent, props, taskId, toggleViewTaskHandler }) => {
   const dispatch = useDispatch();
   const tasks = useSelector((state) => state.get("tasks"));
   const handleClick = () => {
