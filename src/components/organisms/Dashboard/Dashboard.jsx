@@ -23,15 +23,7 @@ const Dashboard = (props) => {
         : TASK_TYPES.VIEW_TASKS
     );
   };
-  const toggleDeleteTaskHandler = () => {
-    setTaskType((taskType) =>
-      taskType === TASK_TYPES.VIEW_TASKS
-        ? TASK_TYPES.DELETE_TASK
-        : TASK_TYPES.VIEW_TASKS
-    );
-  }
 
-  console.log("****taskType", taskType)
   return (
     <Fragment>
       {taskType === TASK_TYPES.VIEW_TASKS && (

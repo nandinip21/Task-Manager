@@ -42,12 +42,14 @@ const taskReducer = (state = initialState, action) => {
 
     case DELETE_SAGA_TASK: {
       const newTasks = state.get("tasks").filter((task, index) => {
-        return index != action.payload.id1;
+        return index != action.payload.id2;
       });
+
       return state.set("tasks", newTasks);
     }
-    case DELETE_SAGA_TASK_SUCCESS:
+    case DELETE_SAGA_TASK_SUCCESS: {
       return state;
+    }
 
     case DELETE_SAGA_TASK_FAILURE:
       return state.set("tasks", []).set("err", state.get("err"));
@@ -56,7 +58,6 @@ const taskReducer = (state = initialState, action) => {
       const currTask = action.payload.id2;
       const index = action.payload.id3;
       const newTasks = state.get("tasks").map((task, ind) => {
-        console.log("INDEX: ", typeof ind, typeof index);
         if (ind == index) {
           return currTask;
         } else return task;

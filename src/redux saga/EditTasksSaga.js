@@ -17,7 +17,6 @@ function* onEditTask(action) {
       [`http://localhost:3000/tasks/${task?.[0]?.id}`],
       currTask
     );
-    console.log("Edited Data", response.data);
     yield put(editSagaTaskSuccess(response.data));
   } catch (err) {
     yield put(editSagaTaskFailure(err));

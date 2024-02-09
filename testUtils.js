@@ -8,7 +8,6 @@ export const renderWithProvider = ({
   Component = <></>,
   props = {},
 }) => {
-  console.log(props, "###");
   render(
     <Provider store={store}>
       <BrowserRouter>

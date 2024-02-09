@@ -2,7 +2,6 @@ import React from "react";
 
 const InputComponent = (props) => {
   const name = props.name;
-  console.log("Checking", name);
   const handleChange = (event) => {
     const newInput = event.target.value;
     props.setStateTask({
@@ -11,7 +10,6 @@ const InputComponent = (props) => {
     });
   };
 
-  console.log(props.stateTask.name);
   let inputVal;
   if (props.name == "title") inputVal = props.stateTask.title;
   if (props.name == "description") inputVal = props.stateTask.description;

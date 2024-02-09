@@ -13,7 +13,6 @@ function* onAddTask(action) {
 
     yield put(addTaskSuccess(res.data));
   } catch (err) {
-    console.log("Payload Add", action.payload);
     yield put(addTaskFailure(err));
   }
 }

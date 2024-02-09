@@ -9,7 +9,6 @@ import { memoizedSelector } from "../../selector";
 const CreateTable = (props) => {
   useEffect(() => {
     props.fetchTask();
-    console.log("use effect", props.tasks);
   }, [JSON.stringify(props.tasks)]);
 
   const taskData = props.tasks.map((t, index) => {
@@ -25,16 +24,12 @@ const CreateTable = (props) => {
             props={props}
             taskId={index}
             toggleViewTaskHandler={props.toggleViewTaskHandler}
+            indexId={t.id}
           />
         </td>
         <Link>
           <td>
-            <TableButton
-              btnContent="Delete"
-              indexId={index}
-              taskId={t.id}
-              toggleViewTaskHandler={props.toggleViewTaskHandler}
-            />
+            <TableButton btnContent="Delete" indexId={t.id} taskId={index} />
           </td>
         </Link>
       </tr>

@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { useParams } from "react-router-dom";
 import { editSagaTask } from "../../redux/actions";
 import { Link } from "react-router-dom";
 import Input from "../../atoms/Input";
 
 export const ViewTask = (props) => {
   const id = props.viewTaskId;
-  console.log('****hash',props.tasks, id, '***tasks', props.tasks);
   const [row, setRow] = useState({
     title: props?.tasks?.[id]?.title,
     description: props?.tasks?.[id]?.description,
