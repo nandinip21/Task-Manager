@@ -6,7 +6,7 @@ import {
 } from "../components/redux/actions";
 import { FETCH_TASK } from "../components/redux/constants";
 
-function* onFetchTask() {
+export function* onFetchTask() {
   try {
     const res = yield call(axios.get, ["http://localhost:3000/tasks"]);
     yield put(receiveTaskSuccess(res.data));

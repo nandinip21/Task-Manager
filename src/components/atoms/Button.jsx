@@ -2,7 +2,7 @@ import React from "react";
 import "../atoms/Button.css";
 import { connect } from "react-redux";
 
-const Button = (props) => {
+export const Button = (props) => {
   return (
     <div>
       <button

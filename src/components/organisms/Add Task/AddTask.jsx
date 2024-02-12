@@ -15,7 +15,13 @@ export const AddTask = (props) => {
 
   return (
     <div>
-      <form className="form-main">
+      <form
+        className="form-main"
+        onSubmit={() => {
+          props.addTask(task);
+          props.toggleCreateTaskHandler();
+        }}
+      >
         <Input
           content="Task Title:"
           name="title"
@@ -40,16 +46,8 @@ export const AddTask = (props) => {
           stateTask={task}
           setStateTask={setTask}
         />
-        <Link to="/">
-          <input
-            type="submit"
-            value="Create Task"
-            onClick={() => {
-              props.addTask(task);
-              props.toggleCreateTaskHandler();
-            }}
-          />
-        </Link>
+        {/* <input type="submit" value="Create Task" /> */}
+        <button type="submit">Create Task</button>
       </form>
     </div>
   );

@@ -5,7 +5,7 @@ import { TASK_TYPES } from "./constants";
 import AddTask from "../Add Task/AddTask";
 import ViewTask from "../View Task/ViewTask";
 
-const Dashboard = (props) => {
+export const Dashboard = (props) => {
   const [taskType, setTaskType] = useState(TASK_TYPES.VIEW_TASKS);
   const [viewTaskId, setViewTaskId] = useState(null);
   const toggleCreateTaskHandler = () => {
