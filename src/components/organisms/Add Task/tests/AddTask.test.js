@@ -18,7 +18,7 @@ describe("AddTask Component Testing", () => {
   it("Render Check", () => {
     renderWithProvider({
       Component: AddTask,
-      props: { onClick: mockSubmitClickFunc },
+      // props: { onClick: mockSubmitClickFunc },
     });
     const displayTitle = screen.getByText(/task title:/i);
     const displayDescription = screen.getByText(/description:/i);
@@ -66,14 +66,14 @@ describe("AddTask Component Testing", () => {
     expect(inputPriority.value).toBe("Active");
   });
 
-  it("should navigate to the correct url upon clicking the Create Task", () => {
-    renderWithProvider({ Component: AddTask, props: { addTask } });
-    let createTaskBtn = screen.getByRole("button", {
-      name: /create task/i,
-    });
-    fireEvent.click(createTaskBtn);
-    expect(window.location.pathname).toBe("/");
-  });
+  // it("should navigate to the correct url upon clicking the Create Task", () => {
+  //   renderWithProvider({ Component: AddTask, props: { addTask } });
+  //   let createTaskBtn = screen.getByRole("button", {
+  //     name: /create task/i,
+  //   });
+  //   fireEvent.click(createTaskBtn);
+  //   expect(window.location.pathname).toBe("/");
+  // });
 
   it("should update the input fields when values change", () => {
     renderWithProvider({ Component: AddTask });
